@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{#{% block title %}Bibliotheque Paris{% endblock %}#}
+
+{% block body %}
+<style>
+    /*.example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }*/
+    /*.example-wrapper code { background: #F5F5F5; padding: 2px 6px; }*/
+
+    :root {
+        /* Base font size */
+        font-size: 10px;
+
+        /* Heading height variable*/
+        --heading-height: 30em;
+    }
+
+    body {
+        font-family: "Roboto", Arial, sans-serif;
+        min-height: 100vh;
+        background-color: #101010;
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+        height: var(--heading-height);
+    }
+
+    /* Create angled background with 'before' pseudo-element */
+    header::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 6em;
+        width: 100%;
+        height: calc(var(--heading-height) + 10em);
+        z-index: -1;
+        transform: skewY(-3.5deg);
+        background:
+                linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+                url("media/wallpaper_home.webp") no-repeat center,
+                linear-gradient(#4e4376, #2b5876);
+        background-size: cover;
+        border-bottom: .2em solid #fff;
+    }
+
+    h1 {
+        font-size: calc(2.8em + 2.6vw);
+        font-weight: 700;
+        letter-spacing: .01em;
+        padding: 10rem 0 0 4.5rem;
+        text-shadow: .022em .022em .022em #111;
+        color: #fff;
+    }
+
+    main {
+        padding: calc(var(--heading-height) + 1.5vw) 4em 0;
+    }
+
+    #wallpaper_home_2{
+        background-repeat: no-repeat;
+        width: 100%;
+    }
+
+
+</style>
+
+    <header>
+        <h1>Bibliothèque Paris</h1>
+    </header>
+
+    <main>
+        <img id="wallpaper_home_2" src="media/wallpaper_below.jpg" alt="antic books library">
+        <button id="Go2_pages" onclick="window.location.href='/login'">See our books</button>
+    </main>
+{#    <ul>#}
+{#        <li>Your controller at <code><a href="{{ 'C:/Users/ikram.chehouani/biblio/src/Controller/BiblioHomeController.php'|file_link(0) }}">src/Controller/BiblioHomeController.php</a></code></li>#}
+{#        <li>Your template at <code><a href="{{ 'C:/Users/ikram.chehouani/biblio/templates/biblio_home/index.html.twig'|file_link(0) }}">templates/biblio_home/index.html.twig</a></code></li>#}
+{#    </ul>#}
+</div>
+{% endblock %}
