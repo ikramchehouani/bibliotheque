@@ -64,6 +64,31 @@
         width: 100%;
     }
 
+    #Go2_pages{
+        position: sticky;
+        right: 100px;
+        bottom: 70px;
+        padding: 0.60em 1.6em;
+        border: 0.1em solid #000000;
+        box-sizing: border-box;
+        color: #ffffff;
+        text-align: center;
+        background-color: #303f2b;
+        cursor: pointer;
+        font-size: medium;
+    }
+    #Go2_pages:hover{
+        color:#FFFFFF;
+        border-color:#FFFFFF;
+        font-weight: bold;
+    }
+    @media all and (max-width:30em){
+        #Go2_pages{
+            display:block;
+            margin:0.4em auto;
+            }
+    }
+
 
 </style>
 
@@ -73,7 +98,7 @@
 
     <main>
         <img id="wallpaper_home_2" src="media/wallpaper_below.jpg" alt="antic books library">
-        <button id="Go2_pages" onclick="window.location.href='/login'">See our books</button>
+        <button id="Go2_pages" onclick="window.location.href='/products'">See our books</button>
     </main>
 {#    <ul>#}
 {#        <li>Your controller at <code><a href="{{ 'C:/Users/ikram.chehouani/biblio/src/Controller/BiblioHomeController.php'|file_link(0) }}">src/Controller/BiblioHomeController.php</a></code></li>#}

@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class BiblioHomeController extends AbstractController
 {
-    #[Route('/biblio/home', name: 'app_biblio_home')]
+    #[Route('/', name: 'app_biblio_home')]
     public function index(): Response
     {
         return $this->render('biblio_home/index.html.twig', [
