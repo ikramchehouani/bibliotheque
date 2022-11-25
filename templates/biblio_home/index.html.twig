@@ -4,9 +4,6 @@
 
 {% block body %}
 <style>
-    /*.example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }*/
-    /*.example-wrapper code { background: #F5F5F5; padding: 2px 6px; }*/
-
     :root {
         /* Base font size */
         font-size: 10px;
@@ -48,10 +45,8 @@
 
     h1 {
         font-size: calc(2.8em + 2.6vw);
-        font-weight: 700;
         letter-spacing: .01em;
         padding: 10rem 0 0 4.5rem;
-        text-shadow: .022em .022em .022em #111;
         color: #fff;
     }
 
@@ -80,7 +75,7 @@
     #Go2_pages:hover{
         color:#FFFFFF;
         border-color:#FFFFFF;
-        font-weight: bold;
+        /*font-weight: bold;*/
     }
     @media all and (max-width:30em){
         #Go2_pages{
@@ -88,7 +83,6 @@
             margin:0.4em auto;
             }
     }
-
 
 </style>
 
@@ -98,11 +92,7 @@
 
     <main>
         <img id="wallpaper_home_2" src="media/wallpaper_below.jpg" alt="antic books library">
-        <button id="Go2_pages" onclick="window.location.href='/products'">See our books</button>
+        <button id="Go2_pages" onclick="window.location.href='/products'">Voir nos livres</button>
     </main>
-{#    <ul>#}
-{#        <li>Your controller at <code><a href="{{ 'C:/Users/ikram.chehouani/biblio/src/Controller/BiblioHomeController.php'|file_link(0) }}">src/Controller/BiblioHomeController.php</a></code></li>#}
-{#        <li>Your template at <code><a href="{{ 'C:/Users/ikram.chehouani/biblio/templates/biblio_home/books.html.twig'|file_link(0) }}">templates/biblio_home/books.html.twig</a></code></li>#}
-{#    </ul>#}
-</div>
+
 {% endblock %}

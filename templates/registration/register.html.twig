@@ -1,21 +1,164 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
-
 {% block body %}
+
+    <style>
+        :before,
+        *:after{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: .01em;
+            color: #fff;
+            /*text-align: center;*/
+            padding: 2rem 0rem;
+            margin: 1rem;
+            font-family: 'Poppins',sans-serif;
+        }
+
+        body{
+            background-color: black;
+        }
+        /*.background{*/
+        /*    width: 430px;*/
+        /*    height: 520px;*/
+        /*    position: absolute;*/
+        /*    transform: translate(-50%,-50%);*/
+        /*    left: 50%;*/
+        /*    top: 50%;*/
+        /*}*/
+        /*.background .shape{*/
+        /*    height: 200px;*/
+        /*    width: 200px;*/
+        /*    position: absolute;*/
+        /*    border-radius: 50%;*/
+        /*}*/
+        /*.shape:first-child{*/
+        /*    background: linear-gradient( #303f2b, #1e4f0e );*/
+        /*    left: -80px;*/
+        /*    top: -80px;*/
+        /*}*/
+        /*.shape:last-child{*/
+        /*    background: linear-gradient( to right, #ad8052, #ad8052 );*/
+        /*    right: -30px;*/
+        /*    bottom: -80px;*/
+        /*}*/
+        form{
+            height: 520px;
+            width: 400px;
+            background-color: rgb(255 255 255 / 10%);
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.1);
+            box-shadow: 0 0 40px rgba(8,7,16,0.6);
+            padding: 5px 35px;
+        }
+        form *{
+            font-family: 'Poppins',sans-serif;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            outline: none;
+            border: none;
+        }
+        form h3{
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 42px;
+            text-align: center;
+        }
+
+        label{
+            display: block;
+            margin-top: 30px;
+            font-size: 16px;
+            font-weight: 500;
+            /*float: left;*/
+        }
+        input[type="text"],input[type="password"]{
+            display: block;
+            height: 50px;
+            width: 100%;
+            /*background-color: rgba(255,255,255,0.07);*/
+            background-color: #e8f0fe;
+            border-radius: 3px;
+            padding: 0 10px;
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        /*::placeholder{*/
+        /*    color: #e5e5e5;*/
+        /*}*/
+        button{
+            width: 100%;
+            background-color: #303f2b;
+            padding: 15px 0;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            position: sticky;
+            border: 0.1em solid #000000;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        button:hover{
+            color:#FFFFFF;
+            border-color:#FFFFFF;
+            /*font-weight: bold;*/
+        }
+
+        /*input[type="checkbox"]{*/
+        /*    width: 28px;*/
+        /*    height: 28px;*/
+        /*    margin: 25px 0;*/
+        /*    float: right;*/
+        /*}*/
+
+
+        .question{
+            margin: 40px 0;
+        }
+        #Go2_sign_in{
+            color: #dcb489;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
+
+{#    <div class="background">#}
+{#        <div class="shape"></div>#}
+{#        <div class="shape"></div>#}
+{#    </div>#}
+
+    <h1>Bibliothèque Paris</h1>
+
     {% for flash_error in app.flashes('verify_email_error') %}
         <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
     {% endfor %}
 
-    <h1>Register</h1>
-
     {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+        <h3>Inscription</h3>
 
-        <button type="submit" class="btn">Register</button>
+        {{ form_row(registrationForm.email)}}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Mot de passe'
+        }) }}
+{#        {{ form_row(registrationForm.agreeTerms) }}#}
+        <div class="question">
+            <span>Vous avez déjà un compte ? <a id="Go2_sign_in" onclick="window.location.href='/login'" >Connectez-vous</a></span>
+        </div>
+        <button type="submit">S'inscrire</button>
     {{ form_end(registrationForm) }}
 {% endblock %}

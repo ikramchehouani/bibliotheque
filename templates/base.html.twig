@@ -6,22 +6,12 @@
         <meta name="content" content="bibliotheque,livres,paris">
         <meta name="author" content="Ikram CHEHOUANI">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>{% block title %}Bibliotheque Paris{% endblock %}</title>
-{#        <link rel="stylesheet" href="app.css">#}
+        <title>{% block title %}Bibliothèques Paris{% endblock %}</title>
         <link id="icon_site" rel="icon"  type="image/png" href="media/icon_livres.png">
-
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-{#        {% block stylesheets %}#}
-{#            {{ encore_entry_link_tags('app') }}#}
-{#        {% endblock %}#}
-
-
-{#        {% block javascripts %}#}
-{#            {{ encore_entry_script_tags('app') }}#}
-{#        {% endblock %}#}
-        <p></p>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {% block body %}
+        {% endblock %}
     </body>
 </html>

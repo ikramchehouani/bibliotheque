@@ -1,42 +1,182 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Log in!{% endblock %}
 
 {% block body %}
-<form method="post">
-    {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
 
-    {% if app.user %}
-        <div class="mb-3">
-            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+
+    <style>
+        :before,
+        *:after{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: .01em;
+            color: #fff;
+            /*text-align: center;*/
+            padding: 2rem 0rem;
+            margin: 1rem;
+            font-family: 'Poppins',sans-serif;
+        }
+
+        body{
+            background-color: black;
+        }
+        /*.background{*/
+        /*    width: 430px;*/
+        /*    height: 520px;*/
+        /*    position: absolute;*/
+        /*    transform: translate(-50%,-50%);*/
+        /*    left: 50%;*/
+        /*    top: 50%;*/
+        /*}*/
+        /*.background .shape{*/
+        /*    height: 200px;*/
+        /*    width: 200px;*/
+        /*    position: absolute;*/
+        /*    border-radius: 50%;*/
+        /*}*/
+        /*.shape:first-child{*/
+        /*    background: linear-gradient( #303f2b, #1e4f0e );*/
+        /*    left: -80px;*/
+        /*    top: -80px;*/
+        /*}*/
+        /*.shape:last-child{*/
+        /*    background: linear-gradient( to right, #ad8052, #ad8052 );*/
+        /*    right: -30px;*/
+        /*    bottom: -80px;*/
+        /*}*/
+        form{
+            height: 520px;
+            width: 400px;
+            background-color: rgb(255 255 255 / 10%);
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.1);
+            box-shadow: 0 0 40px rgba(8,7,16,0.6);
+            padding: 5px 35px;
+        }
+        form *{
+            font-family: 'Poppins',sans-serif;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            outline: none;
+            border: none;
+        }
+        form h3{
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 42px;
+            text-align: center;
+        }
+
+        label{
+            display: block;
+            margin-top: 30px;
+            font-size: 16px;
+            font-weight: 500;
+            /*float: left;*/
+        }
+        .form-control{
+            display: block;
+            height: 50px;
+            width: 100%;
+            background-color: rgba(255,255,255,0.07);
+            border-radius: 3px;
+            padding: 0 10px;
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        /*::placeholder{*/
+        /*    color: #e5e5e5;*/
+        /*}*/
+        button{
+            width: 100%;
+            background-color: #303f2b;
+            padding: 15px 0;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            position: sticky;
+            border: 0.1em solid #000000;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        button:hover{
+            color:#FFFFFF;
+            border-color:#FFFFFF;
+            /*font-weight: bold;*/
+        }
+
+        /*input[type="checkbox"]{*/
+        /*    width: 28px;*/
+        /*    height: 28px;*/
+        /*    margin: 25px 0;*/
+        /*    float: right;*/
+        /*}*/
+
+
+        .question{
+            margin: 40px 0;
+        }
+        #Go2_sign_in{
+            color: #dcb489;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
+
+    <h1>Bibliothèque Paris</h1>
+
+    <form method="post">
+        {% if error %}
+            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+
+        {% if app.user %}
+            <div class="mb-3">
+                You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+            </div>
+        {% endif %}
+
+        <h3>Connexion</h3>
+        <label for="inputEmail">Email</label>
+        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+        <label for="inputPassword">Mot de passe</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+
+        <input type="hidden" name="_csrf_token"
+               value="{{ csrf_token('authenticate') }}"
+        >
+
+        {#
+            Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+            See https://symfony.com/doc/current/security/remember_me.html
+
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" name="_remember_me"> Remember me
+                </label>
+            </div>
+        #}
+
+        <div class="question">
+            <a id="Go2_sign_in" onclick="window.location.href='/reset-password'" >Mot de passe oublié</a>
+        </div>        <div class="question">
+            <span>Vous n'avez pas de compte ? <a id="Go2_sign_in" onclick="window.location.href='/register'" >Inscrivez-vous</a></span>
         </div>
-    {% endif %}
-
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <label for="inputEmail">Email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-    <label for="inputPassword">Password</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
-
-    <input type="hidden" name="_csrf_token"
-           value="{{ csrf_token('authenticate') }}"
-    >
-
-    {#
-        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-        See https://symfony.com/doc/current/security/remember_me.html
-
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" name="_remember_me"> Remember me
-            </label>
-        </div>
-    #}
-
-    <button class="btn btn-lg btn-primary" type="submit">
-        Sign in
-    </button>
-</form>
+        <button type="submit">Se connecter</button>
+    </form>
 {% endblock %}
