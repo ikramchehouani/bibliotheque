@@ -1,0 +1,146 @@
+{#Anne Frank's Book description#}
+{% extends 'base.html.twig' %}
+{% block body %}
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        body{
+            background:
+                    linear-gradient(75deg, hsla(0, 2%, 11%, 0.96), rgb(137, 137, 137));
+            font-family: SimSun;
+            font-size: 16px;
+        }
+        h1,h2,h3,h4,h5,h6{
+            font-family: "Book Antiqua";
+            font-weight: bolder;
+            color: #ce9d60;
+        }
+        h1{
+            font-family: Mistral;
+            color: #303f2b;
+            font-size: xx-large;
+            text-align: center;
+        }
+        h3{
+            font-size: 16px;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #303f2b;
+            color: white;
+        }
+
+        .topnav .icon {
+            display: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav a:not(:first-child) {display: none;}
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav.responsive {position: relative;}
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+
+        .popup_book {
+            padding: 5px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            box-shadow: rgb(137, 137, 137) 0px 50px 100px -20px, rgb(255, 255, 255) 0px 30px 60px -30px, rgba(28, 27, 27, 0.96) 0px -2px 6px 0px inset;
+            background: #FFFFFF;
+
+        }
+        .content{
+            text-align: justify ;
+            margin: 0 20px;
+        }
+
+        .img2 {
+            float: right;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin: 20px;
+        }
+
+    </style>
+    <header>
+        <div class="topnav" id="myTopnav">
+            <a href="/"><i class="fa fa-fw fa-home"></i>Accueil</a>
+            <a href="/products" class="active"><i class="fa fa-fw fa-book"></i>Livres</a>
+            <a href="#contact"><i class="fa fa-fw fa-user"></i>Profil</a>
+            <a href="#about"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <script>
+            /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+            function responsiveNav() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    </header>
+
+    <main>
+        <div class="popup_book">
+            <img class="img2" src="media/book_1.jpg" alt="Le Journal d'Anne Frank">
+            <div class="content">
+                <h1>Le journal d'Anne Frank</h1>
+                <h3>Editeur</h3>
+                <span>Le Livre De Poche</span>
+                <h3>Résumé</h3>
+                <p>Anne Frank est née le 12 juin 1929 à Francfort. Sa famille a émigré aux Pays-Bas en 1933. À Amsterdam, elle connaît une enfance heureuse jusqu’en 1942, malgré la guerre. Le 6 juillet 1942, les Frank s’installent clandestinement dans «l’Annexe» de l’immeuble du 263, Prinsengracht. Le 4 août 1944, ils sont arrêtés sur dénonciation. Déportée à Auschwitz, puis à Bergen-Belsen, Anne meurt du typhus en février ou mars 1945, peu après sa sœur Margot. La jeune fille a tenu son journal du 12 juin 1942 au 1er août 1944, et son témoignage, connu dans le monde entier, reste l’un des plus émouvants sur la vie quotidienne d’une famille juive sous le joug nazi. Cette édition comporte des pages inédites.</p>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+
