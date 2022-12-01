@@ -33,7 +33,7 @@ class ProductsController extends AbstractController
     #[Route('/Tatoueur_Auschwitz', name: 'app_book_Tatoueur')]
     public function index3(): Response
     {
-        return $this->render('products/Book_Tatoueur.html.twig', [
+        return $this->render('products/Book_Tatoueur_Auschwitz.html.twig', [
         ]);
     }
     #[Route('/Bel_Ami', name: 'app_book_bel_ami')]
@@ -52,14 +52,14 @@ class ProductsController extends AbstractController
     #[Route('/Dernier_Jour_d1Condamne', name: 'app_book_dernier_jour')]
     public function index6(): Response
     {
-        return $this->render('products/Dernier_Jour_d1Condamne.html.twig', [
+        return $this->render('products/Book_Dernier_Jour_d1Condamne.html.twig', [
         ]);
     }
 
     #[Route('/Ptit_Prince', name: 'app_book_petit_prince')]
     public function index7(): Response
     {
-        return $this->render('products/Book_Ptit_Prince', [
+        return $this->render('products/Book_Ptit_Prince.html.twig', [
         ]);
     }
     #[Route('/Rouge&Noir', name: 'app_book_rouge&noir')]

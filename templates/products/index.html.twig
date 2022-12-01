@@ -1,3 +1,4 @@
+{% extends 'base.html.twig' %}
 {% block body %}
     <style>
         *,
@@ -36,12 +37,11 @@
         }
 
         .topnav a:hover {
-            background-color: #ddd;
-            color: black;
+            background-color: #222;
         }
 
         .topnav a.active {
-            background-color: #303f2b;
+            background-color: #303f2b42;
             color: white;
         }
 
@@ -185,14 +185,46 @@
             aspect-ratio: 16 / 13;
             transition: 400ms ease-in-out;
         }
+        .right_nav{
+            float: right;
+        }
+        .fa-user-circle-o:before {
+            content: "\f2be";
+            font-size: 17px;
+        }
+        .Goback {
+            background-color: #303f2b;
+            border: none;
+            padding: 10px 22px;
+            text-align: center;
+            color: #FFFFFF;
+            margin: 20px 0;
+            opacity: 0.6;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .Takebutton {
+            background-color: #303f2b;
+            border: none;
+            padding: 10px 22px;
+            text-align: center;
+            color: #FFFFFF;
+            margin: 20px 0;
+            opacity: 1;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .Takebutton:hover {opacity: 0.6}
 
     </style>
     <header>
         <div class="topnav" id="myTopnav">
-            <a href="/"><i class="fa fa-fw fa-home"></i>Accueil</a>
-            <a href="/products" class="active"><i class="fa fa-fw fa-book"></i>Livres</a>
-            <a href="#contact"><i class="fa fa-fw fa-user"></i>Profil</a>
-            <a href="#about"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+            <a href="/">Accueil</a>
+            <a href="/products" class="active">Livres</a>
+            <div class="right_nav">
+                <a href="/login"><i class="fa fa-user-circle-o"></i></a>
+            </div>
             <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
                 <i class="fa fa-bars"></i>
             </a>
@@ -312,7 +344,7 @@
 
         <a href="/Miserables">
             <figure>
-                <img src="media/book_les_miserables.jpeg" alt="Livre Les miserables">
+                <img src="media/book_les_miserables.jpg" alt="Livre Les miserables">
                 <figcaption class="header_caption" role="presentation">
                     <h1 class="title title_big1">Les Misérables</h1>
                     <h2 class="title title_little1">Victor Hugo</h2>
@@ -322,7 +354,7 @@
 
         <a href="/3Mousquetaires">
             <figure>
-                <img src="media/book_3mousquetaires.jpeg" alt="Livre Les trois mousquetaires">
+                <img src="media/book_3mousquetaires.jpg" alt="Livre Les trois mousquetaires">
                 <figcaption class="header_caption" role="presentation">
                     <h1 class="title title_big1">Les Trois Mousquetaires</h1>
                     <h2 class="title title_little1">Alexandre Dumas</h2>

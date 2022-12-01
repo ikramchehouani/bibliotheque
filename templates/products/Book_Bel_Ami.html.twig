@@ -14,8 +14,7 @@
         body{
             background:
                     linear-gradient(75deg, hsla(0, 2%, 11%, 0.96), rgb(137, 137, 137));
-            font-family: SimSun;
-            font-size: 16px;
+            font:16px/1.2 'Poppins', sans-serif;
         }
         h1,h2,h3,h4,h5,h6{
             font-family: "Book Antiqua";
@@ -27,9 +26,11 @@
             color: #303f2b;
             font-size: xx-large;
             text-align: center;
+            margin: 20px 0;
         }
         h3{
             font-size: 16px;
+            margin: 10px 0 0;
         }
 
         .topnav {
@@ -49,12 +50,11 @@
         }
 
         .topnav a:hover {
-            background-color: #ddd;
-            color: black;
+            background-color: #222;
         }
 
         .topnav a.active {
-            background-color: #303f2b;
+            background-color: #303f2b42;
             color: white;
         }
 
@@ -85,7 +85,7 @@
         }
 
         .popup_book {
-            padding: 5px;
+            padding: 22px;
             position: absolute;
             left: 50%;
             top: 50%;
@@ -98,21 +98,57 @@
         .content{
             text-align: justify ;
             margin: 0 20px;
+            font-family: "Courier New";
+            font-size: 14px;
         }
 
         .img2 {
             float: right;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             margin: 20px;
+            width: 205.99px;
+            height: 338px;
         }
+        .right_nav{
+            float: right;
+        }
+        .fa-user-circle-o:before {
+            content: "\f2be";
+            font-size: 17px;
+        }
+        .Goback {
+            background-color: #303f2b;
+            border: none;
+            padding: 10px 22px;
+            text-align: center;
+            color: #FFFFFF;
+            margin: 20px 0;
+            opacity: 0.6;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .Takebutton {
+            background-color: #303f2b;
+            border: none;
+            padding: 10px 22px;
+            text-align: center;
+            color: #FFFFFF;
+            margin: 20px 0;
+            opacity: 1;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .Takebutton:hover {opacity: 0.6}
 
     </style>
     <header>
         <div class="topnav" id="myTopnav">
-            <a href="/"><i class="fa fa-fw fa-home"></i>Accueil</a>
-            <a href="/products" class="active"><i class="fa fa-fw fa-book"></i>Livres</a>
-            <a href="#contact"><i class="fa fa-fw fa-user"></i>Profil</a>
-            <a href="#about"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+            <a href="/">Accueil</a>
+            <a href="/products" class="active">Livres</a>
+            <div class="right_nav">
+                <a href="/login"><i class="fa fa-user-circle-o"></i></a>
+            </div>
             <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
                 <i class="fa fa-bars"></i>
             </a>
@@ -132,13 +168,15 @@
 
     <main>
         <div class="popup_book">
-            <img class="img2" src="media/book_1.jpg" alt="Le Journal d'Anne Frank">
+            <img class="img2" src="media/book_4.jpg" alt="Bel-Ami">
             <div class="content">
-                <h1>Le journal d'Anne Frank</h1>
-                <h3>Editeur</h3>
-                <span>Le Livre De Poche</span>
+                <h1>Bel-Ami</h1>
+                <h3>Auteur</h3>
+                <span>Guy De Maupassant</span>
                 <h3>Résumé</h3>
-                <p>Anne Frank est née le 12 juin 1929 à Francfort. Sa famille a émigré aux Pays-Bas en 1933. À Amsterdam, elle connaît une enfance heureuse jusqu’en 1942, malgré la guerre. Le 6 juillet 1942, les Frank s’installent clandestinement dans «l’Annexe» de l’immeuble du 263, Prinsengracht. Le 4 août 1944, ils sont arrêtés sur dénonciation. Déportée à Auschwitz, puis à Bergen-Belsen, Anne meurt du typhus en février ou mars 1945, peu après sa sœur Margot. La jeune fille a tenu son journal du 12 juin 1942 au 1er août 1944, et son témoignage, connu dans le monde entier, reste l’un des plus émouvants sur la vie quotidienne d’une famille juive sous le joug nazi. Cette édition comporte des pages inédites.</p>
+                <p>A qui Georges Duroy doit-il son irrésistible ascension ? Aux femmes séduites par sa jeunesse et sa beauté. La petite fille de l'une de ses maîtresses le surnommera Bel-Ami. Et ce fils d'aubergistes normands, à Canteleu, deviendra baron Du Roy de Cantel. L'amitié lui ouvrira la carrière journalistique. L'amour lui donnera l'argent et la gloire. Maupassant a été journaliste. Il a connu ce monde parisien du xixe siècle, les salles de rédaction qui font et défont les ministères, et leurs annexes, les salons mondains où naissent intrigues et liaisons. Ses portraits de femmes dévorées d'amour ou d'ambition, ses tableaux de la vallée de la Seine à Rouen, ses fiacres, avenue du Bois de Boulogne, sont oeuvre de peintre. Maupassant était un maître du récit.</p>
+                <button class="Goback" onclick="location.href='/products';"><i class="fa fa-arrow-left" aria-hidden="true"></i> Librairie</button>
+                <button class="Takebutton"><i class="fa fa-ticket" aria-hidden="true"></i> Réserver</button>
             </div>
         </div>
     </main>

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fd9912f9065996e556ca8f7d6831914a",
+    "content-hash": "a98259798ddaf7a737db00143a03fd6d",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -3264,16 +3264,16 @@
         },
         {
             "name": "symfony/form",
-            "version": "v6.0.15",
+            "version": "v6.0.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/form.git",
-                "reference": "a3662b210f7e9d3de23273c755d704ad6d8836cb"
+                "reference": "1ff4439b8f55d91c0982583c15d339c08abf1e63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/form/zipball/a3662b210f7e9d3de23273c755d704ad6d8836cb",
-                "reference": "a3662b210f7e9d3de23273c755d704ad6d8836cb",
+                "url": "https://api.github.com/repos/symfony/form/zipball/1ff4439b8f55d91c0982583c15d339c08abf1e63",
+                "reference": "1ff4439b8f55d91c0982583c15d339c08abf1e63",
                 "shasum": ""
             },
             "require": {
@@ -3301,7 +3301,7 @@
                 "symfony/twig-bridge": "<5.4"
             },
             "require-dev": {
-                "doctrine/collections": "~1.0",
+                "doctrine/collections": "^1.0|^2.0",
                 "symfony/config": "^5.4|^6.0",
                 "symfony/console": "^5.4|^6.0",
                 "symfony/dependency-injection": "^5.4|^6.0",
@@ -3346,7 +3346,7 @@
             "description": "Allows to easily create, process and reuse HTML forms",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/form/tree/v6.0.15"
+                "source": "https://github.com/symfony/form/tree/v6.0.16"
             },
             "funding": [
                 {
@@ -3362,7 +3362,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-10-23T10:33:07+00:00"
+            "time": "2022-11-28T12:25:56+00:00"
         },
         {
             "name": "symfony/framework-bundle",
@@ -3849,6 +3849,99 @@
                 }
             ],
             "time": "2022-10-28T16:22:58+00:00"
+        },
+        {
+            "name": "symfony/maker-bundle",
+            "version": "v1.48.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/maker-bundle.git",
+                "reference": "2e428e8432e9879187672fe08f1cc335e2a31dd6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/2e428e8432e9879187672fe08f1cc335e2a31dd6",
+                "reference": "2e428e8432e9879187672fe08f1cc335e2a31dd6",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/inflector": "^2.0",
+                "nikic/php-parser": "^4.11",
+                "php": ">=8.0",
+                "symfony/config": "^5.4.7|^6.0",
+                "symfony/console": "^5.4.7|^6.0",
+                "symfony/dependency-injection": "^5.4.7|^6.0",
+                "symfony/deprecation-contracts": "^2.2|^3",
+                "symfony/filesystem": "^5.4.7|^6.0",
+                "symfony/finder": "^5.4.3|^6.0",
+                "symfony/framework-bundle": "^5.4.7|^6.0",
+                "symfony/http-kernel": "^5.4.7|^6.0"
+            },
+            "conflict": {
+                "doctrine/doctrine-bundle": "<2.4",
+                "doctrine/orm": "<2.10",
+                "symfony/doctrine-bridge": "<5.4"
+            },
+            "require-dev": {
+                "composer/semver": "^3.0",
+                "doctrine/doctrine-bundle": "^2.4",
+                "doctrine/orm": "^2.10.0",
+                "symfony/http-client": "^5.4.7|^6.0",
+                "symfony/phpunit-bridge": "^5.4.7|^6.0",
+                "symfony/polyfill-php80": "^1.16.0",
+                "symfony/process": "^5.4.7|^6.0",
+                "symfony/security-core": "^5.4.7|^6.0",
+                "symfony/yaml": "^5.4.3|^6.0",
+                "twig/twig": "^2.0|^3.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Bundle\\MakerBundle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Maker helps you create empty commands, controllers, form classes, tests and more so you can forget about writing boilerplate code.",
+            "homepage": "https://symfony.com/doc/current/bundles/SymfonyMakerBundle/index.html",
+            "keywords": [
+                "code generator",
+                "generator",
+                "scaffold",
+                "scaffolding"
+            ],
+            "support": {
+                "issues": "https://github.com/symfony/maker-bundle/issues",
+                "source": "https://github.com/symfony/maker-bundle/tree/v1.48.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-11-14T10:48:46+00:00"
         },
         {
             "name": "symfony/mime",
@@ -6750,59 +6843,48 @@
     ],
     "packages-dev": [
         {
-            "name": "symfony/maker-bundle",
-            "version": "v1.48.0",
+            "name": "symfony/web-profiler-bundle",
+            "version": "v6.0.14",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/maker-bundle.git",
-                "reference": "2e428e8432e9879187672fe08f1cc335e2a31dd6"
+                "url": "https://github.com/symfony/web-profiler-bundle.git",
+                "reference": "1cb5000dd0eb125aa465f757b5d09201e556fa87"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/2e428e8432e9879187672fe08f1cc335e2a31dd6",
-                "reference": "2e428e8432e9879187672fe08f1cc335e2a31dd6",
+                "url": "https://api.github.com/repos/symfony/web-profiler-bundle/zipball/1cb5000dd0eb125aa465f757b5d09201e556fa87",
+                "reference": "1cb5000dd0eb125aa465f757b5d09201e556fa87",
                 "shasum": ""
             },
             "require": {
-                "doctrine/inflector": "^2.0",
-                "nikic/php-parser": "^4.11",
-                "php": ">=8.0",
-                "symfony/config": "^5.4.7|^6.0",
-                "symfony/console": "^5.4.7|^6.0",
-                "symfony/dependency-injection": "^5.4.7|^6.0",
-                "symfony/deprecation-contracts": "^2.2|^3",
-                "symfony/filesystem": "^5.4.7|^6.0",
-                "symfony/finder": "^5.4.3|^6.0",
-                "symfony/framework-bundle": "^5.4.7|^6.0",
-                "symfony/http-kernel": "^5.4.7|^6.0"
+                "php": ">=8.0.2",
+                "symfony/config": "^5.4|^6.0",
+                "symfony/framework-bundle": "^5.4|^6.0",
+                "symfony/http-kernel": "^5.4|^6.0",
+                "symfony/routing": "^5.4|^6.0",
+                "symfony/twig-bundle": "^5.4|^6.0",
+                "twig/twig": "^2.13|^3.0.4"
             },
             "conflict": {
-                "doctrine/doctrine-bundle": "<2.4",
-                "doctrine/orm": "<2.10",
-                "symfony/doctrine-bridge": "<5.4"
+                "symfony/dependency-injection": "<5.4",
+                "symfony/form": "<5.4",
+                "symfony/mailer": "<5.4",
+                "symfony/messenger": "<5.4"
             },
             "require-dev": {
-                "composer/semver": "^3.0",
-                "doctrine/doctrine-bundle": "^2.4",
-                "doctrine/orm": "^2.10.0",
-                "symfony/http-client": "^5.4.7|^6.0",
-                "symfony/phpunit-bridge": "^5.4.7|^6.0",
-                "symfony/polyfill-php80": "^1.16.0",
-                "symfony/process": "^5.4.7|^6.0",
-                "symfony/security-core": "^5.4.7|^6.0",
-                "symfony/yaml": "^5.4.3|^6.0",
-                "twig/twig": "^2.0|^3.0"
+                "symfony/browser-kit": "^5.4|^6.0",
+                "symfony/console": "^5.4|^6.0",
+                "symfony/css-selector": "^5.4|^6.0",
+                "symfony/stopwatch": "^5.4|^6.0"
             },
             "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "1.0-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
-                    "Symfony\\Bundle\\MakerBundle\\": "src/"
-                }
+                    "Symfony\\Bundle\\WebProfilerBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -6810,21 +6892,18 @@
             ],
             "authors": [
                 {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
                     "name": "Symfony Community",
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "Symfony Maker helps you create empty commands, controllers, form classes, tests and more so you can forget about writing boilerplate code.",
-            "homepage": "https://symfony.com/doc/current/bundles/SymfonyMakerBundle/index.html",
-            "keywords": [
-                "code generator",
-                "generator",
-                "scaffold",
-                "scaffolding"
-            ],
+            "description": "Provides a development tool that gives detailed information about the execution of any request",
+            "homepage": "https://symfony.com",
             "support": {
-                "issues": "https://github.com/symfony/maker-bundle/issues",
-                "source": "https://github.com/symfony/maker-bundle/tree/v1.48.0"
+                "source": "https://github.com/symfony/web-profiler-bundle/tree/v6.0.14"
             },
             "funding": [
                 {
@@ -6840,7 +6919,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-11-14T10:48:46+00:00"
+            "time": "2022-10-02T08:16:40+00:00"
         }
     ],
     "aliases": [],
