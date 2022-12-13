@@ -87,9 +87,8 @@
         .popup_book {
             padding: 22px;
             position: absolute;
-            left: 50%;
             top: 50%;
-            -webkit-transform: translate(-50%, -50%);
+            left: 50%;
             transform: translate(-50%, -50%);
             box-shadow: rgb(137, 137, 137) 0px 50px 100px -20px, rgb(255, 255, 255) 0px 30px 60px -30px, rgba(28, 27, 27, 0.96) 0px -2px 6px 0px inset;
             background: #FFFFFF;
@@ -187,12 +186,17 @@
                     x.className = "topnav";
                 }
             }
+            function reserver()
+            {
+                document.getElementById('test').src="media/missingbook.jpg";
+            }
+
         </script>
     </header>
 
     <main>
         <div class="popup_book">
-            <img class="img2" src="media/book_2.jpg" alt="Antigone">
+            <img class="img2" id="test" src="media/book_2.jpg" alt="Antigone">
             <div class="content">
                 <h1>Antigone</h1>
                 <h3>Auteur</h3>
@@ -200,7 +204,7 @@
                 <h3>Résumé</h3>
                 <p>Créon, le roi de Thèbes, a interdit qu'on enterre le corps de Polynice selon les rites religieux. Sa soeur, Antigone, se révolte et brave la décision de Créon : elle est alors condamnée à mort. Des personnages s'affrontent violemment, une famille se déchire. Faut-il désobéir à la loi lorsqu'elle paraît injuste ? Telle est la question posée par Sophocle dans cette tragédie grecque</p>
                 <button class="Goback" onclick="location.href='/products';"><i class="fa fa-arrow-left" aria-hidden="true"></i> Librairie</button>
-                <button class="Takebutton"><i class="fa fa-ticket" aria-hidden="true"></i> Réserver</button>
+                <button class="Takebutton" onclick="reserver()"><i class="fa fa-ticket" aria-hidden="true"></i> Réserver</button>
             </div>
         </div>
     </main>

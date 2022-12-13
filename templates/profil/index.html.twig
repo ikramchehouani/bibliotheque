@@ -9,18 +9,14 @@
         font:16px/1.2 'Poppins', sans-serif;
     }
     .container {
-        background-color: black;
-        /* height: 37rem; */
-        border-radius: 5px;
+        background-color: #0a0a0d;
+        border-radius: 30px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        box-shadow: rgba(0, 0, 0, 0.7);
         color: white;
-        /* margin: 40px; */
-        width: 340px;
-        height: 340px;
-        /* background-color: red; */
+        width: 350px;
+        height: 350px;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -29,10 +25,11 @@
         margin: auto;
         font-family: 'Baloo Paaji 2', cursive;
         padding: 10px;
+        box-shadow: inset rgb(255 255 255) 2px 1px 10px, #000000 1px 3px 8px 1px, rgb(248 246 242 / 53%) -2px 6px 6px;
     }
 
     .card {
-        background-color: black;
+        background-color: #0a0a0d;
         /* height: 37rem; */
         border-radius: 5px;
         display: flex;
@@ -41,11 +38,6 @@
         box-shadow: rgba(0, 0, 0, 0.7);
         color: white;
     }
-
-    /*.card__name {*/
-    /*    margin-top: 15px;*/
-    /*    font-size: 1.5em;*/
-    /*}*/
 
     .card__image {
         height: 160px;
@@ -191,85 +183,8 @@
     .fa-user-circle-o:before {
         content: "\f2be";
         font-size: 17px;
-    }
-
-
-
-    /*.social-icons {*/
-    /*    padding: 0;*/
-    /*    list-style: none;*/
-    /*    margin: 1em;*/
-    /*}*/
-
-    /*.social-icons li {*/
-    /*    display: inline-block;*/
-    /*    margin: 0.15em;*/
-    /*    position: relative;*/
-    /*    font-size: 1em;*/
-    /*}*/
-
-    /*.social-icons i {*/
-    /*    color: #fff;*/
-    /*    position: absolute;*/
-    /*    top: 0.95em;*/
-    /*    left: 0.96em;*/
-    /*    transition: all 265ms ease-out;*/
-    /*}*/
-
-    /*.social-icons a {*/
-    /*    display: inline-block;*/
-    /*}*/
-
-    /*.social-icons a:before {*/
-    /*    transform: scale(1);*/
-    /*    -ms-transform: scale(1);*/
-    /*    -webkit-transform: scale(1);*/
-    /*    content: " ";*/
-    /*    width: 45px;*/
-    /*    height: 45px;*/
-    /*    border-radius: 100%;*/
-    /*    display: block;*/
-    /*    background: linear-gradient(45deg, #ff003c, #c648c8);*/
-    /*    transition: all 265ms ease-out;*/
-    /*}*/
-
-    /*.social-icons a:hover:before {*/
-    /*    transform: scale(0);*/
-    /*    transition: all 265ms ease-in;*/
-    /*}*/
-
-    /*.social-icons a:hover i {*/
-    /*    transform: scale(2.2);*/
-    /*    -ms-transform: scale(2.2);*/
-    /*    -webkit-transform: scale(2.2);*/
-    /*    color: #ff003c;*/
-    /*    background: -webkit-linear-gradient(45deg, #ff003c, #c648c8);*/
-    /*    -webkit-background-clip: text;*/
-    /*    -webkit-text-fill-color: transparent;*/
-    /*    transition: all 265ms ease-in;*/
-    /*}*/
-
-    /*.grid-container {*/
-    /*    display: grid;*/
-    /*    grid-template-columns: 1fr 1fr;*/
-    /*    grid-gap: 20px;*/
-    /*    font-size: 1.2em;*/
-    /*}*/
 
 </style>
-
-{#<div class="example-wrapper">#}
-{#    <h1>Hello {{ controller_name }}! ✅</h1>#}
-
-{#    This friendly message is coming from:#}
-{#    <ul>#}
-{#        <li>Your controller at <code><a href="{{ 'C:/Users/ikram.chehouani/biblio/src/Controller/ProfilController.php'|file_link(0) }}">src/Controller/ProfilController.php</a></code></li>#}
-{#        <li>Your template at <code><a href="{{ 'C:/Users/ikram.chehouani/biblio/templates/profil/index.html.twig'|file_link(0) }}">templates/profil/index.html.twig</a></code></li>#}
-{#    </ul>#}
-{#    <p>Nom : {{ app.user.lastname }}</p>#}
-{#    <p>Prénom : {{ app.user.firstname }}</p>#}
-{#    <p>E-mail : {{ app.user.email }}</p>#}
-{#</div>#}
     <header>
         <div class="topnav" id="myTopnav">
             <a href="/">Accueil</a>
@@ -296,27 +211,8 @@
     <div class="container">
         <div class="card">
             <img src="media/no_pic.jpg" alt="Person" class="card__image">
-            <p class="card__name">E-mail : {{ app.user.email }}</p>
-{#            <div class="grid-container">#}
-
-{#                <div class="grid-child-posts">#}
-{#                    156 Post#}
-{#                </div>#}
-
-{#                <div class="grid-child-followers">#}
-{#                    1012 Likes#}
-{#                </div>#}
-
-{#            </div>#}
-{#            <ul class="social-icons">#}
-{#                <li><a href="#"><i class="fa fa-instagram"></i></a></li>#}
-{#                <li><a href="#"><i class="fa fa-twitter"></i></a></li>#}
-{#                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>#}
-{#                <li><a href="#"><i class="fa fa-codepen"></i></a></li>#}
-{#            </ul>#}
-{#            <button class="btn draw-border">Follow</button>#}
-            <button class="btn draw-border">Delete my account</button>
-
+            <p class="card__name"><i class="fa fa-envelope"></i> {{ app.user.email }}</p>
+            <a class="btn draw-border">Supprimer mon compte</a>
         </div>
     </div>
 
